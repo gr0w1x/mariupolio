@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chess</title>
+        <link rel="stylesheet" href="../../../styles/common.css">
+        <link rel="stylesheet" href="styles/chess.css">
+    </head>
+    <body class="game flex flex-vertical">
+        <header class="interface-panel">
+            <a class="text-link" href="../../../index.html">
+                <button class="button-rect">↩</button>
+            </a>
+            <div></div>
+            <div id="history" class="flex">
+                <button id="undo" class="button-rect"><span>↶</span></button>
+                <button id="redo" class="button-rect">↷</button>
+            </div>
+        </header>
+        <main class="flex flex-center no-select">
+            <div id="board-wrapper">
+                <div id="board"></div>
+            </div>
+        </main>
+        <footer class="flex flex-center">
+            <div id="state" class="no-select"></div>
+        </footer>
+        <div class="modal flex flex-center flex-vertical" id="promote" hidden>
+            <h1>Promote to</h1>
+            <div class="content flex flex-horizontal" id="promote-options"></div>
+        </div>
+        <script src="scripts/tools.js"></script>
+        <script src="scripts/game.js"></script>
+        <script src="scripts/view.js"></script>
+    </body>
+</html>

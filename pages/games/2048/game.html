@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>2048</title>
+        <link rel="stylesheet" href="../../../styles/common.css">
+        <link rel="stylesheet" href="./styles/2048.css">
+    </head>
+    <body class="game flex flex-vertical">
+        <header class="interface-panel">
+            <a class="text-link" href="../../../index.html">
+                <button class="button-rect">↩</button>
+            </a>
+            <div id="score" class="no-select"></div>
+            <div id="goal" class="no-select"></div>
+        </header>
+        <main class="flex flex-center">
+            <div id="board"></div>
+        </main>
+        <footer class="flex flex-horizontal flex-center">
+            <button id="retry" hidden>RETRY</button>
+            <button id="save" hidden>SAVE</button>
+        </footer>
+        <script src="./scripts/game.js"></script>
+    </body>
+</html>

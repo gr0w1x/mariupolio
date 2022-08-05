@@ -1,0 +1,100 @@
+header {
+    flex-basis: 20%;
+}
+
+.logo {
+    gap: 5px;
+}
+
+.logo > span,
+.logo::after {
+    --color: #ccc;
+    font-family: Console;
+    font-size: 7vmin;
+    font-weight: normal;
+    text-align: center;
+    color: var(--color);
+}
+
+.logo::after {
+    content: "|";
+    font-size: 5vmin;
+    position: relative;
+}
+.logo.logo-animated::after {
+    display: none;
+}
+
+.logo.logo-animated > span {
+    animation: logo-light 1s ease-out forwards, logo-move var(--duration) var(--delay) linear infinite var(--direction);
+}
+
+@keyframes logo-light {
+    from {
+        text-shadow: 0 0 0 var(--color);
+    }
+    to {
+        text-shadow: 0 0 10px var(--color);
+    }
+}
+
+@keyframes logo-move {
+    0%, 50%, 100% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(var(--from));
+    }
+    75% {
+        transform: translateY(var(--to));
+    }
+}
+
+.logo .logo-1 {
+    --color: rgb(95, 212, 95);
+}
+
+.logo .logo-0 {
+    --color: rgb(209, 119, 103);
+}
+
+footer {
+    width: 100%;
+    flex-basis: 10%;
+    padding: 0 20px;
+    text-align: center;
+}
+
+main {
+    flex-basis: 70%;
+}
+
+.list-items {
+    gap: 5px;
+    max-width: 70vw;
+    width: 500px;
+}
+
+.list-item,
+.list-item button {
+    width: 100%;
+}
+
+.list-item button {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 15px;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vmin;
+}
+
+.cell {
+    animation: none !important;
+}
+
+@media screen and (max-width: 500px) {
+    footer {
+        font-size: 0.75rem;
+    }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Snake</title>
+        <link rel="stylesheet" href="./styles/snake.css">
+        <link rel="stylesheet" href="../../../styles/common.css">
+    </head>
+    <body class="game flex flex-vertical">
+        <header class="interface-panel">
+            <a class="text-link" href="../../../index.html">
+                <button class="button-rect">↩</button>
+            </a>
+            <div id="score" class="no-select"></div>
+        </header>
+        <main>
+            <div id="board">
+                <div></div>
+                <div class="fruit"></div>
+            </div>
+        </main>
+        <footer class="flex flex-center">
+            <button id="retry">RETRY</button>
+            <button id="save">SAVE</button>
+        </footer>
+        <script src="./scripts/game.js"></script>
+    </body>
+</html>

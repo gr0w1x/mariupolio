@@ -1,0 +1,113 @@
+header > * {
+    margin: auto;
+}
+
+#state {
+    width: 75px;
+    height: 75px;
+}
+
+main {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    padding: 5px;
+    overflow: auto auto;
+}
+
+.minesweeper-board {
+    display: flex;
+    gap: 2px;
+    flex-direction: column;
+    border-radius: 5px;
+    background: #222;
+    padding: 5px;
+}
+
+.minesweeper-row {
+    display: flex;
+    gap: 2px;
+}
+
+.minesweeper-cell {
+    width: 8vmin;
+    height: 8vmin;
+    border-radius: 0.1em;
+    border: none;
+    padding: 0;
+    outline: none;
+    font-size: 4vmin;
+    font-weight: bolder;
+    font-family: Header;
+    background: #444;
+    color: transparent;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+    user-select: none;
+}
+
+.minesweeper-cell:hover,
+.minesweeper-cell:focus:hover {
+    background: #777;
+}
+.minesweeper-cell:focus {
+    background: #444;
+}
+
+.minesweeper-cell.opened {
+    background: #333 !important;
+}
+
+.minesweeper-cell.opened.bomb {
+    background: #ff583c !important;
+}
+
+.minesweeper-cell.count-1 {
+    color: #2d92e5;
+}
+.minesweeper-cell.count-2 {
+    color: #ff583c;
+}
+.minesweeper-cell.count-3 {
+    color: #4ada4a;
+}
+.minesweeper-cell.count-4 {
+    color: #e1a638;
+}
+.minesweeper-cell.count-5 {
+    color: #f4f45e;
+}
+.minesweeper-cell.count-6 {
+    color: #d14cd1;
+}
+.minesweeper-cell.count-7 {
+    color: #d0475e;
+}
+.minesweeper-cell.count-8 {
+    color: #979797;
+}
+
+.minesweeper-cell.marked,
+.minesweeper-cell.bomb {
+    color: #ccc;
+}
+
+#timer,
+#count {
+    font-size: 2rem;
+    font-family: Text;
+}
+
+#save {
+    width: min-content;
+    padding: 10px 20px;
+    text-align: center;
+    margin: auto;
+}
+
+#timer {
+    width: 100%;
+    text-align: center;
+}

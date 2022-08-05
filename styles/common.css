@@ -1,0 +1,137 @@
+html,
+body {
+    height: 100%;
+    background: #111;
+    color: #ccc;
+    font-family: Text;
+    margin: 0;
+}
+
+html {
+    overscroll-behavior: none;
+}
+
+body {
+    overflow: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@viewport {
+    user-zoom: fixed;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-horizontal {
+    flex-direction: row;
+}
+
+.flex-vertical {
+    flex-direction: column;
+}
+
+.flex-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-fill {
+    align-items: center;
+    justify-content: space-between;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+}
+
+.text-link {
+    color: #b8b8b8;
+    transition: color 0.25s ease-in-out;
+}
+.text-link:hover,
+.text-link:focus {
+    color: #ddd;
+}
+
+.no-text-link {
+    color: #ccc;
+}
+
+.no-select {
+    user-select: none;
+}
+
+button {
+    color: inherit;
+    background: #222;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    user-select: none;
+    transition: 0.5s ease-in-out;
+    transition-property: background-color, opacity;
+    font-family: Header;
+}
+button:hover,
+button:focus {
+    background: #333;
+}
+button:disabled {
+    opacity: 0.5;
+}
+
+.button-rect {
+    width: 50px;
+    height: 50px;
+    line-height: 0;
+    font-size: 1.5rem;
+}
+
+.game header,
+.game footer {
+    padding: 0 20px;
+}
+
+.game .interface-panel {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    grid-gap: 10px;
+}
+
+.game header {
+    font: Header;
+    flex-basis: 20%;
+}
+.game main {
+    flex-basis: 70%;
+}
+.game footer {
+    flex-basis: 10%;
+}
+
+@font-face {
+    font-family: Text;
+    src: url("../assets/fonts/Montserrat-Regular.ttf");
+}
+
+@font-face {
+    font-family: Header;
+    src: url("../assets/fonts/OpenSans-ExtraBold.ttf");
+}
+
+@font-face {
+    font-family: Console;
+    src: url("../assets/fonts/DejaVuSansMono.ttf");
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>Minesweeper</title>
+        <link rel="stylesheet" href="../../../styles/common.css">
+        <link rel="stylesheet" href="./styles/minesweeper.css">
+    </head>
+    <body class="game flex flex-vertical">
+        <header class="interface-panel">
+            <a href="../../../index.html" class="no-text-link">
+                <button class="button-rect">↩</button>
+            </a>
+            <button id="state" class="button-rect flex flex-center"></button>
+            <button id="random" class="button-rect" hidden>?</button>
+        </header>
+        <main>
+            <div id="board"></div>
+        </main>
+        <footer class="interface-panel">
+            <div id="count" class="no-select"></div>
+            <div id="timer" class="no-select"></div>
+            <button id="save" hidden>SAVE</button>
+        </footer>
+        <script src="scripts/game.js"></script>
+    </body>
+</html>

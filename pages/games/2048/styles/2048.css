@@ -1,0 +1,73 @@
+header,
+footer {
+    flex-grow: 1;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+#score {
+    font-size: 4rem;
+}
+#goal {
+    font-size: 1rem;
+    font-family: Text;
+    font-weight: lighter;
+}
+
+footer {
+    gap: 5px;
+}
+footer button {
+    width: 300px;
+    max-width: 40vw;
+}
+
+main {
+    overflow: hidden;
+}
+
+#board {
+    padding: 5px;
+    border-radius: 15px;
+    background: #222;
+    height: 80vmin;
+    max-height: 75%;
+    aspect-ratio: 1;
+    position: relative;
+}
+
+.cell {
+    --accent: transparent;
+    --background: transparent;
+    position: absolute;
+    transition: 0.3s ease-in;
+    transition-property: top, left;
+    animation: cell-appear 0.5s ease-in-out;
+    border-radius: 15%;
+    border: 0.075em solid var(--accent);
+    color: var(--accent);
+    text-shadow: 0 0 5px var(--accent);
+    box-shadow: 0 0 5px var(--accent);
+    background: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+@keyframes cell-appear {
+    from,
+    50% {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}

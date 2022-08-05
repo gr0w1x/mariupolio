@@ -1,0 +1,83 @@
+main {
+    flex-basis: 100%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+#board {
+    height: 75vmin;
+    width: 75vmin;
+    background: #222;
+    position: relative;
+    z-index: 0;
+}
+
+#score {
+    font-size: 4rem;
+    font-weight: bolder;
+}
+
+.snake {
+    transition: 0.25s ease-out;
+    transition-property: top, left;
+    background: #caa342;
+    z-index: 2;
+}
+.snake:nth-of-type(2n + 1) {
+    background: #57e34f;
+}
+
+.snake:first-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition-property: top, left, transform;
+}
+.snake:first-of-type.LEFT {
+    transform: rotateZ(0deg);
+}
+.snake:first-of-type.TOP {
+    transform: rotateZ(90deg);
+}
+.snake:first-of-type.RIGHT {
+    transform: rotateZ(180deg);
+}
+.snake:first-of-type.BOTTOM {
+    transform: rotateZ(270deg);
+}
+.snake:first-of-type::before,
+.snake:first-of-type::after {
+    content: "";
+    background: #222;
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+    margin: 10%;
+}
+
+.snake:last-of-type {
+    z-index: 1;
+}
+
+.fruit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.snake,
+.fruit {
+    position: absolute;
+    user-select: none;
+}
+
+footer {
+    gap: 5px;
+}
+footer button {
+    width: 300px;
+    max-width: 40vw;
+}
